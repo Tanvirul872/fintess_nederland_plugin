@@ -31,6 +31,32 @@ function plugin_css_jsscripts() {
 
 
 
+// Register activation hook
+register_activation_hook( __FILE__, 'create_custom_table' );
+
+// Function to create the custom table
+function create_custom_table() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'fitness_question_employee';
+    // SQL query to create the table
+    $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        q_id INT,
+        f1_chk1 VARCHAR(255),
+        f2_chk2 VARCHAR(255),
+        qstn_code VARCHAR(255),
+        selected_doc VARCHAR(255),
+        qustn_num VARCHAR(255),
+        
+        status INT
+    )";
+
+    // Execute the SQL query
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    dbDelta( $sql );
+}
+
+
 // Add the fitness Form menu page
 function fitness_form_menu_page() {
     add_menu_page(

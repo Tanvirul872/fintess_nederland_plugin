@@ -2,3 +2,27 @@
 
 
 
+.question_sec {
+    display: flex;
+    gap:10px ; 
+} 
+
+
+.accordion {
+    display: block;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}

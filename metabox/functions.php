@@ -22,11 +22,11 @@ function metabox_fitnesspage(array $product_meta)
                 'desc' => 'Select items from the list',
                 'type' => 'multicheck',
                 'options' => array(
-                    'f1_1' => 'jaa',
-                    'f1_2' => 'nee',
-                    'f1_3' => 'weit neit',
-                    'f1_4' => 'geen idie',
-                    'f1_5' => 'geen',
+                    'jaa' => 'jaa',
+                    'nee' => 'nee',
+                    'weit neit' => 'weit neit',
+                    'geen idie' => 'geen idie',
+                    'geen' => 'geen',
                 ),
             ),
            
@@ -42,14 +42,13 @@ function metabox_fitnesspage(array $product_meta)
                 'desc' => 'Select items from the list',
                 'type' => 'multicheck',
                 'options' => array(
-                    'f2_5' => 'jaa',
-                    'f2_6' => 'nee',
-                    'f2_7' => 'man',
-                    'f2_8' => 'vrouw',
-                    'f2_9' => 'geen voorkeur',
-                    'f2_11' => 'weit neit',
-                    'f2_10' => 'geen',
-                    
+                    'jaa' => 'jaa',
+                    'nee' => 'nee',
+                    'man' => 'man',
+                    'vrouw' => 'vrouw',
+                    'geen voorkeur' => 'geen voorkeur',
+                    'weit neit' => 'weit neit',
+                    'geen' => 'geen', 
                 ),
             ),
            
