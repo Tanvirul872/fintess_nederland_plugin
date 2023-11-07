@@ -47,7 +47,6 @@ if ($the_query->have_posts()) {
                                <input id="qustn_num" type="hidden" value="<?php echo get_the_ID().'_'.$i+1 ; ?>" >      
                             </div> 
 
-                              
                                 <div class="select_doc">
                                     <label for="dropdown1"> Main Question : </label>
                                     <select id="dropdown1" width="10%">

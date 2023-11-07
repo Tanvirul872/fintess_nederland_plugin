@@ -19,8 +19,12 @@ function save_questions() {
     $followCheck2Value = $formdata['followCheck2Value'];
     $get_doctors = $formdata['get_doctors']; 
     $qustn_num = $formdata['qustn_num']; 
-    $qstn_code = implode('_', $formdata); // Create the qstn_code
+    $qstn_code =   $dropdown1Value.'_'.$followCheck1Value.'_'.$followCheck2Value;
     $table_name = $wpdb->prefix . 'fitness_question_employee';
+
+
+
+    // print_r($qstn_code) ; 
 
     // Check if a record with the same qstn_code exists
     $existing_record = $wpdb->get_row(

@@ -7,7 +7,6 @@
  */
  
 
-
 include('ajax-actions.php');
 //cmb2
 include('metabox/init.php');
@@ -47,7 +46,6 @@ function create_custom_table() {
         qstn_code VARCHAR(255),
         selected_doc VARCHAR(255),
         qustn_num VARCHAR(255),
-        
         status INT
     )";
 
@@ -69,28 +67,6 @@ function fitness_form_menu_page() {
         30 // Position of the menu item
     );
 
-
-    // Add the submenu page for manual input
-       add_submenu_page(
-        'fitness-form-page',    // Parent menu slug
-        'Manual Registration',     // Page title
-        'Manual Registration',     // Menu title
-        'manage_options',   // Capability required to access the page
-        'manual-registration',     // Menu slug
-        'fitness_manual_registration' // Callback function to render the page content
-    );
-
-        // Add the submenu page for view users data
-       add_submenu_page(
-        'fitness-form-page',    // Parent menu slug
-        'Users Data',     // Page title
-        '',     // Menu title
-        'manage_options',   // Capability required to access the page
-        'view-fitness-member',     // Menu slug
-        'fitness_view_user_data' // Callback function to render the page content
-         );
-
-  
 
 }
 add_action('admin_menu', 'fitness_form_menu_page');
